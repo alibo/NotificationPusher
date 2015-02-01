@@ -128,7 +128,13 @@ class Gcm extends BaseAdapter
      */
     public function getDefaultParameters()
     {
-        return array();
+        return array(
+            'restrictedPackageName' => null,
+            'delayWhileIdle' => false,
+            'dryRun' => false,
+            'collapseKey' => null,
+            'ttl' => 900 //15 min (in seconds)
+        );
     }
 
     /**
